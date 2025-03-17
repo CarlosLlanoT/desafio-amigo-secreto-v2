@@ -26,3 +26,13 @@ function actualizarLista(){
         listaAmigos.appendChild(li);
     }
 }
+function sortearAmigo(){
+    if(amigdos.length == 0){
+        alert("no hay amigos disponibles para sortear. Agrega l menos uno.");
+        return;
+    }
+    const indiceAleatorio = Math.floor(Math.random()*amigos.length);
+    const amigoSorteado = amigos[indiceAleatorio];
+    const resultado = document.getElementById('resultado');
+    resultado.innerHTML= 'Amigo sorteado: <strong>${amigoSorteado}</strong>';
+}
